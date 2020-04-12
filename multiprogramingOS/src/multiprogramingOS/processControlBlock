@@ -1,0 +1,52 @@
+
+public class processControlBlock {
+ private int id;
+ private state s;
+ private double cut;
+ private int size;
+ private RAM<processControlBlock> readyQueue=new RAM<processControlBlock>();
+
+
+ public processControlBlock(int id,int size1){
+      this.id=id;
+     s=state.New;
+     cut=0;
+     size=size1;
+     readyQueue.enqueue(this);
+ }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getSize() {
+        return size;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setS(state s) {
+        this.s = s;
+    }
+
+    public void setCut(double cut) {
+   
+        this.cut = cut;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public state getS() {
+        return s;
+    }
+
+    public double getCut() {
+        return cut;
+    }
+
+
+         
+}
